@@ -1,0 +1,18 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "@/*": ["./*"] // This is fine for resolving paths within the project
+    },
+    "typeRoots": ["./types", "./node_modules/@types"], // Include custom types
+    "baseUrl": "./" // Optional: ensures that your paths work properly
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts",
+    "types/**/*.d.ts" // Ensure custom types are included
+  ]
+}
